@@ -1,304 +1,324 @@
 <!DOCTYPE html>
 <html id="top">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
-<title>イースト・ギンザ・カンパニー：東銀座のインディーゲーム製作チーム</title>
-<style>
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
-</style>
-<style>
-body {
-	font-family: "中ゴシックBBB", "YuGothic", "Yu Gothic", "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-size: 17px;
-	line-height: 1.75em;
-	letter-spacing: 0.075em;
-	color: black;
-	-webkit-font-smoothing: antialiased;
-	padding-bottom: 3rem;
-}
-img {
-	width: 64%;
-	height: auto;
-	max-width: 100%;
-}
-a {
-	color: black;
-	text-decoration: none;
-}
-.toparea {
-	text-align:center;
-	padding-top:0;
-}
-section {
-	padding-top:1rem;
-	padding-bottom:1rem;
-	width:50rem;
-	display:block;
-	margin:auto;
-}
-section .p1 {
-	padding-top:0;
-	padding-bottom:0;
-}
-h1, h2, h3, h4, h5 {
-	display:block;
-	margin-left: 1rem;
-	margin-right: 1rem;
-}
-h3 {
-	font-size: 100%;
-	padding-top: 2rem;
-}
-p, ul {
-	display:block;
-	margin-left: 5rem;
-	margin-right: 0;
-}
-p {
-	text-indent: 1em;
-}
-p:last-child {
-	margin-bottom: 1rem;
-}
-ul {
-	margin-block-start: 0;
-	margin-block-end: 0;
-	margin-inline-start: 1rem;
-	margin-inline-end: 0;
-	padding-inline-start: 5rem;
-}
-li {
-	font-weight:bold;
-}
-#floatingmenu{
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	text-align:center;
-	padding-top:1rem;
-	padding-bottom:1rem;
-	background:white;
-}
-#floatingmenu a {
-	display: inline-block;
-	margin-right: 2rem;
-}
-#floatingmenu a:last-child {
-	margin-right: 0;
-}
-small {
-	display:block;
-	margin-top:8rem;
-	text-align:center;
-}
-/* MOBILE */
-@media screen and (max-width: 639px) {
-	img {
-		width: 100%;
-		height: auto;
-		max-width: 100%;
-	}
-	section {
-		width:100%;
-	}
-	p, ul {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
-	ul {
-		padding-inline-start: 1em;
-	}
-	section .toparea, section .p1 {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-}
-</style>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+	<title>イースト・ギンザ・カンパニー：東銀座のインディーゲーム製作チーム</title>
+	<style>
+		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+		button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+	</style>
+	<style>
+		html, body {
+			width:100%;
+		}
+		body {
+			font-family: "中ゴシックBBB", "YuGothic", "Yu Gothic", "游ゴシック", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+			font-size: 17px;
+			line-height: 1.75em;
+			letter-spacing: 0.075em;
+			color: black;
+			-webkit-font-smoothing: antialiased;
+			padding-bottom: 3rem;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 100%;
+		}
+		a {
+			color: black;
+			text-decoration: none;
+		}
+		header {
+			text-align:center;
+			padding-top:0;
+		}
+		section, header {
+			width:100%;
+			padding-top:1rem;
+			padding-bottom:1rem;
+			width:50rem;
+			display:block;
+			margin:auto;
+		}
+		section .p1 {
+			padding-top:0;
+			padding-bottom:0;
+		}
+		ruby {
+			padding-left:1rem;
+			padding-right:1rem;
+		}
+		h1, h2, h3, h4, h5 {
+			display:block;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+		h1 {
+			margin:0;
+		}
+		h3 {
+			font-size: 100%;
+			padding-top: 2rem;
+		}
+		p, ul {
+			display:block;
+			margin-left: 5rem;
+			margin-right: 0;
+		}
+		p {
+			text-indent: 1em;
+		}
+		p:last-child {
+			margin-bottom: 1rem;
+		}
+		ul {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			margin-inline-start: 1rem;
+			margin-inline-end: 0;
+			padding-inline-start: 5rem;
+		}
+		li {
+			font-weight:bold;
+		}
+		nav {
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			text-align:center;
+			padding-top:1rem;
+			padding-bottom:1rem;
+			background:white;
+		}
+		nav a {
+			display: inline-block;
+			margin-right: 2rem;
+		}
+		nav a:last-child {
+			margin-right: 0;
+		}
+		small {
+			display:block;
+			margin-top:8rem;
+			text-align:center;
+		}
+		/* MOBILE */
+		@media screen and (max-width: 639px) {
+			img {
+				width: 100%;
+				height: auto;
+				max-width: 100%;
+			}
+			section {
+				width:100%;
+			}
+			p, ul {
+				margin-left: 2rem;
+				margin-right: 2rem;
+			}
+			ul {
+				padding-inline-start: 1em;
+			}
+			header, section .p1 {
+				padding-top: 0;
+				padding-bottom: 0;
+				width:100%;
+			}
+		}
+	</style>
 </head>
 <body>
-<section class="toparea">
-	<h1 style="margin:0;"><img src="./title.png" alt="EAST GINZA COMPANY (イースト・ギンザ・カンパニー)" /></h1>
-</section>
-<div id="floatingmenu"><a href="#top">EAST GINZA COMPANY</a><a href="#p1">これは何？</a><a href="#p2">方針</a><a href="#p3">人材募集</a><a href="#p4">創業趣意書</a><a href="#p5">ご連絡先</a></div>
-<section id="p1">
-	<h2>これは何？</h2>
-	<p>
-	東京・東銀座のインディーゲーム製作チーム<ruby style="padding-left:1rem;padding-right:1rem;">EAST GINZA COMPANY<rt> イースト・ギンザ・カンパニー</rt></ruby>です。<br />
-	2本のタイトルの開発にとりかかっています。　<a href="#p4" style="text-decoration:underline;">※人材募集中</a><br />
-		<ul>
-			<li>1人用アクションゲーム</li>
-			<li>多人数参加型オンラインゲーム</li>
-		</ul>
-	</p>
-	<h3>代表プロフィール</h3>
-	<p>
-	Webと情報セキュリティの仕事を経てアニメ業界の大手企業で経営企画、出資作品のプロデュース、各種プロジェクトマネジメントを経験してきました。現在、平日昼間はITコンサルタントの仕事をやっています。
-	</p>
-	<p>
-	<b>「こういうゲームがあったら面白いのに、なんでないんやろ」と思うことが多くなった結果「自分で作ればオモロいやん！」と思い立ちインディーゲーム製作をスタート。</b>
-	</p>
-	<p>
-	好きなゲーム：<br />
-	任天堂タイトル全般，風のクロノア，クラッシュバンディクー，シムシティ，Civilization，Battlefield 4，Killing Floor，OverWatch，PUBG 等</p>
-</section>
-<section id="p2">
-	<h2>方針</h2>
-	<p>
-		<ul>
-			<li>作る我々自身が面白いと思うものを作る</li>
-			<li>世の中をあっと言わせるものを提供する</li>
-			<li>ちゃんと稼いで次につなげる</li>
-		</ul>
-	</p>
-	<p></p>
-	<p></p>
-</section>
-<section id="p3">
-	<h2>人材募集</h2>
-	<h3>募集要項</h3>
-	<p>
-	<b>空いた時間でゲーム作りを手伝ってくれる方いませんか？</b>
-	</p>
-	<p>
-		<ul>
-			<li>期間：　準委任契約　1ヶ月間（1ヶ月単位で契約期間を更新）</li>
-			<li>目安：　作業量　週10時間（1ヶ月計40時間）</li>
-			<li>対価：　1ヶ月計　10万円</li>
-		</ul>
-	</p>
-	<p>
-	<b>条件は、Unreal Engine を使えること。</b>もちろん全機能が分かる必要はないです。
-	<b>「こんなことをやるためにはどう実装するかな」「やったことないけどこうやればできるかな」</b>と手探りで考えて、時にはAssetを組み合わせながら、Blueprintを書ける方。（C++できればなお可）
-	</p>
-	<p>
-	<b>空いた時間で作業するでOK。</b>
-	表向きは「週何時間かの作業」という形のご依頼ですが「言われたやつ、もうできあがりました」とか「今週はちょっと、調子が乗らなくて作業しません」というのもOK。
-	もし「全然ダメでした、成果が上がらなかった」となってもギャラはしっかりお支払いします。
-	</p>
-	<p>
-	<b>なんといっても代表（私）だけでトボトボと作業を進めるのに比べて、力を貸してもらって、ちょっとでも前に進められればいいな、と思っています。</b>
-	</p>
-	<p>
-	スタートのイメージとしては、いったいどんなものを目指していくのか<b>しっかりと打ち合わせしてビジョンを一致</b>させてから作業に移りたいと思います。（打ち合わせの時間もギャラはお渡しします。準委任契約の契約書にちゃんと記載します）
-	</p>
-	<p>
-	一緒にゲームを作って、世の中をあっと言わせませんか？
-	</p>
-	<h3>どんな風に作るの？</h3>
-	<p>
-	<b>「この挙動を作って、どうなるか見てみましょう」</b>という一歩ずつ手探りの進め方をします。
-	</p>
-	<p>
-	作りたいゲームのイメージはあります。ですが<b>ゲーム作りは「実験」をしながらどんどん形を変えていくもの。</b>
-	「仕様書を渡すからこの通りに作ってください」というやり方ではなく、作っている時の手ごたえを見てどんどんゲームを面白いものに磨いていきたいと考えています。
-	</p>
-	<p>
-	<b>あれこれやっているうちに、世の中にはないものができあがっていく面白み。</b>
-	ゆるそうな開発体制ですが、いいゲームを作るにはこの進め方がベストだと思います。
-	</p>
-	<h3>やれそうな気がしてきた。ギャラをもらえる以外にも参加する意義はあるの？</h3>
-	<p>
-	<b>作る人のモチベーションと中長期的なキャリアへの貢献。</b>
-	</p>
-	<p>
-		<ul>
-			<li>ちゃんと完成させます</li>
-			<li>ちゃんと売れるものを作ります</li>
-			<li>売れたらギャラ上げます</li>
-		</ul>
-	</p>
-	<p>
-	フルタイムの仕事でもそうですけど、「携わっている仕事が日の目を見ないでポシャった」とか「苦労したのに評価されない」ってのがつらいですよね。
-	それわかるので、疑問はなんでも代表（私）にぶつけてください。
-	<b>ちゃんと上に掲げたものがやっていけるんだな、と実感してもらって一緒に進めていきたいと思ってます。</b>
-	</p>
-	<p>
-	代表（私）はアニメ業界の大手でプロデューサーとか経営企画をやっていたので、ゲームを含む<b>コンテンツビジネスの勘所</b>を知ってます。必要に応じて頼れる人脈もあります。
-	Web系の個人開発もやっていたのでしっかり手を動かした経験があり、<b>サーバー側の開発も好物なので、オンラインゲームの裏側の仕組みを作れます。</b>
-	現在、昼間の仕事ではITコンサルをやっているので、<b>お堅い進め方からゆるい進め方まで、システム開発のディレクション経験はたくさん</b>あります。
-	人のマネジメントも好きなほうで、関わった方から「あなたがいてくれてよかった」といわれることが何よりの喜びです。
-	それゆえ、<b>「ちゃんと完成させる・ちゃんと売る」に責任を持ちたい</b>と思っています。
-	</p>
-	<p>
-	もしお手伝いしてくれる方と意気投合できたら、いずれもっといい条件をお示しして中長期的にご一緒できるといいな、と思っています。
-	</p>
-</section>
-<section id="p4">
-	<h2>創業趣意書</h2>
-	<h3>ゲーム業界の構造的問題</h3>
-	<p>
-		<ul>
-			<li>大手もインディーも思ったようなゲーム作りができていない</li>
-			<li>ゲーマーが「こんなのを本当は遊びたい！」というものを提供する人がいない</li>
-		</ul>
-	</p>
-	<p>
-	結果、大半のゲーマーは楽しいけれど、なんとなく閉塞感も感じている。
-	</p>
-	<p>
-	「本当はこんなやつを遊んでみたい」というゲーマーの需要はあるけど、供給が足りていない。
-	</p>
-	<p>
-	乱暴な言い方ですみません。<br />
-	今のゲーム業界にはこんな「ゲーム業界の構造的問題」があると思っています。
-	</p>
-	<p>
-	<b>つまり「ゲーム業界はレッドオーシャンに見えるけど実はブルーオーシャンな市場」なんじゃないか</b>という見方です。
-	</p>
-	<p>
-	たとえば「PUBG」が出てきたあと、大手の会社は似たようなゲームをたくさん作りましたよね。
-	今やバトロワはマンネリだけどまだ遊んでいるゲーマーは多い。私もその一人です。<br /><br />
-	あるいは、大手が売っているタイトルを見ると大半は往年の名作の続編です。
-	<b>大手の会社は大規模な開発をするので安牌な企画しかできないのです。</b>
-	「こんなもの作ったら面白いからやりましょう」という人が大手の社内にいても「前例がない、実績がないものは稟議を通せない」というのが実態です。
-	</p>
-	<p>
-	対してインディーゲーム。
-	「これは」というタイトルがありつつも、成功しているインディーゲームのチームは世界全体で見れば希少なのではないでしょうか。
-	つい作り手の趣味に走ってしまったり、何を作ればウケるのか分からなかったり、開発のノウハウがないので完成しなかったり。<br /><br />
-	「これが俺の趣味で、これを作りたいんだ！」というはっきりした軸があるなら全然よいのですが、
-	<b>「なんとなくゲームの個人制作で食っていけたらいいなと思っているけど、実際には攻めあぐねている」というチームや人のほうがたくさんいる</b>ように見受けられます。
-	</p>
-	<p>
-	解決策として、我々は<b>「ゲーマーが本当に遊びたいと思うゲームを作って、ちゃんと完成させてちゃんと売る」をやります。
-	位置としては「安牌な企画しかできない大手」と「趣味に走ってしまうインディー」の間です。</b>
-	少人数で小回りのきく開発をしながらも、世の中をあっといわせるゲームを目指し、ちゃんと完成させ、ちゃんと売ることで次につなげます。
-	<b>これは本気でやりたいと思っていて、実現させるだけのノウハウを持っているかも、と思っています。</b></p>
-	</p>
-	<p></p>
-	<p></p>
-	<p></p>
-</section>
-<section id="p5">
-	<h2>ご連絡先</h2>
-	<p><a href="https://x.com/eastginza" target="_blank">X.com/eastginza</a></p>
-	<p></p>
-	<p></p>
-</section>
-
-<small>&copy; 2024 EAST GINZA COMPANY</small>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-	$(function(){
-		const hash = decodeURI(location.hash);
-		if(hash){
-			$("html, body").animate({scrollTop:$(hash).offset().top});
-			window.history.replaceState(null, '', window.location.pathname + window.location.search);
-		}
-		
-		$('a[href^="#"]').click(function(){
-			const href= $(this).attr("href");
-			const target = $(href == "#" || href == "" ? 'html' : href);
-			$("html, body").animate({scrollTop:(target.offset().top - $("#floatingmenu").height() - 30)});
-			window.history.replaceState(null, '', window.location.pathname + window.location.search);
-			return false;
+	<header>
+		<h1><img src="EAST-GINZA-COMPANY.png" alt="EAST GINZA COMPANY (イースト・ギンザ・カンパニー)" /></h1>
+	</header>
+	<nav id="#floatingmenu"><a href="#top">EAST GINZA COMPANY</a><a href="#p1">これは何？</a><a href="#p2">方針</a><a href="#p3">人材募集</a><a href="#p4">創業趣意書</a><a href="#p5">ご連絡先</a></nav>
+	<main>
+		<section id="p1">
+			<h2>これは何？</h2>
+			<p>
+			東京・東銀座のインディーゲーム製作チーム<ruby>EAST GINZA COMPANY<rt> イースト・ギンザ・カンパニー</rt></ruby>です。<br />
+			2本のタイトルの開発にとりかかっています。　<a href="#p3" style="text-decoration:underline;">※人材募集中</a><br />
+				<ul>
+					<li>1人用アクションゲーム</li>
+					<li>多人数参加型オンラインゲーム</li>
+				</ul>
+			</p>
+			<h3>代表プロフィール</h3>
+			<p>
+			Webと情報セキュリティの仕事を経てアニメ業界の大手企業で経営企画、出資作品のプロデュース、各種プロジェクトマネジメントを経験してきました。現在、平日昼間はITコンサルタントの仕事をやっています。
+			</p>
+			<p>
+			<b>「こういうゲームがあったら面白いのに、なんでないんやろ」と思うことが多くなった結果「自分で作ればオモロいやん！」と思い立ちインディーゲーム製作をスタート。</b>
+			</p>
+			<p>
+			好きなゲーム：<br />
+			任天堂タイトル全般，風のクロノア，クラッシュバンディクー，シムシティ，Civilization，Battlefield 4，Killing Floor，OverWatch，PUBG 等</p>
+		</section>
+		<section id="p2">
+			<h2>方針</h2>
+			<p>
+				<ul>
+					<li>作る我々自身が面白いと思うものを作る</li>
+					<li>世の中をあっと言わせるものを提供する</li>
+					<li>ちゃんと稼いで次につなげる</li>
+				</ul>
+			</p>
+		</section>
+		<section id="p3">
+			<h2>人材募集</h2>
+			<h3>募集要項</h3>
+			<p>
+			空いた時間でゲーム作りを手伝ってくれる方いませんか？
+			</p>
+			<p>
+				<ul>
+					<li>期間: 準委任契約　1ヶ月間 (更新あり)</li>
+					<li>対価: 1ヶ月計　10万円</li>
+					<li>目安: 作業量　週10時間 (1ヶ月計40時間)</li>
+				</ul>
+			</p>
+			<p>
+			<b>条件は、Unreal Engine を使えること。</b>もちろん全機能が分かる必要はないです。
+			<b>「こんなことをやるためにはどう実装するかな」「やったことないけどこうやればできるかな」</b>と手探りで考えて、時にはAssetを組み合わせながら、Blueprintを書ける方。（C++できればなお可）
+			</p>
+			<p>
+			<b>空いた時間で作業するでOK。</b>
+			表向きは「週何時間かの作業」という形のご依頼ですが「言われたやつ、もうできあがりました」とか「今週はちょっと、調子が乗らなくて作業しません」というのもOK。
+			もし「全然ダメでした、成果が上がらなかった」となってもギャラはしっかりお支払いします。
+			</p>
+			<p>
+			<b>なんといっても代表（私）だけでトボトボと作業を進めるのに比べて、力を貸してもらって、ちょっとでも前に進められればいいな、と思っています。</b>
+			</p>
+			<p>
+			スタートのイメージとしては、いったいどんなものを目指していくのか<b>しっかりと打ち合わせしてビジョンを一致</b>させてから作業に移りたいと思います。（打ち合わせの時間もギャラはお渡しします。準委任契約の契約書にちゃんと記載します）
+			</p>
+			<p>
+			一緒にゲームを作って、世の中をあっと言わせませんか？
+			</p>
+			<h3>どんな風に作るの？</h3>
+			<p>
+			<b>「この挙動を作って、どうなるか見てみましょう」</b>という一歩ずつ手探りの進め方をします。
+			</p>
+			<p>
+			作りたいゲームのイメージはあります。ですが<b>ゲーム作りは「実験」をしながらどんどん形を変えていくもの。</b>
+			「仕様書を渡すからこの通りに作ってください」というやり方ではなく、作っている時の手ごたえを見てどんどんゲームを面白いものに磨いていきたいと考えています。
+			</p>
+			<p>
+			<b>あれこれやっているうちに、世の中にはないものができあがっていく面白み。</b>
+			ゆるそうな開発体制ですが、いいゲームを作るにはこの進め方がベストだと思います。
+			</p>
+			<h3>やれそうな気がしてきた。ギャラをもらえる以外にも参加する意義はあるの？</h3>
+			<p>
+			<b>作る人のモチベーションと中長期的なキャリアへの貢献。</b>
+			</p>
+			<p>
+				<ul>
+					<li>ちゃんと完成させます</li>
+					<li>ちゃんと売れるものを作ります</li>
+					<li>売れたらギャラ上げます</li>
+				</ul>
+			</p>
+			<p>
+			フルタイムの仕事でもそうですけど、「携わっている仕事が日の目を見ないでポシャった」とか「苦労したのに評価されない」ってのがつらいですよね。
+			それわかるので、疑問はなんでも代表（私）にぶつけてください。
+			<b>ちゃんと上に掲げたものがやっていけるんだな、と実感してもらって一緒に進めていきたいと思ってます。</b>
+			</p>
+			<p>
+			代表（私）はアニメ業界の大手でプロデューサーとか経営企画をやっていたので、ゲームを含む<b>コンテンツビジネスの勘所</b>を知ってます。必要に応じて頼れる人脈もあります。
+			Web系の個人開発もやっていたのでしっかり手を動かした経験があり、<b>サーバー側の開発も好物なので、オンラインゲームの裏側の仕組みを作れます。</b>
+			現在、昼間の仕事ではITコンサルをやっているので、<b>お堅い進め方からゆるい進め方まで、システム開発のディレクション経験はたくさん</b>あります。
+			人のマネジメントも好きなほうで、関わった方から「あなたがいてくれてよかった」といわれることが何よりの喜びです。
+			それゆえ、<b>「ちゃんと完成させる・ちゃんと売る」に責任を持ちたい</b>と思っています。
+			</p>
+			<p>
+			もしお手伝いしてくれる方と意気投合できたら、いずれもっといい条件をお示しして中長期的にご一緒できるといいな、と思っています。
+			</p>
+		</section>
+		<section id="p4">
+			<h2>創業趣意書</h2>
+			<h3>ゲーム業界の構造的問題</h3>
+			<p>
+				<ul>
+					<li>大手もインディーも思ったようなゲーム作りができていない</li>
+					<li>ゲーマーが「こんなのを本当は遊びたい！」というものを提供する人がいない</li>
+				</ul>
+			</p>
+			<p>
+			結果、大半のゲーマーは楽しいけれど、なんとなく閉塞感も感じている。
+			</p>
+			<p>
+			「本当はこんなやつを遊んでみたい」というゲーマーの需要はあるけど、供給が足りていない。
+			</p>
+			<p>
+			乱暴な言い方ですみません。<br />
+			今のゲーム業界にはこんな「ゲーム業界の構造的問題」があると思っています。
+			</p>
+			<p>
+			<b>つまり「ゲーム業界はレッドオーシャンに見えるけど実はブルーオーシャンな市場」なんじゃないか</b>という見方です。
+			</p>
+			<p>
+			たとえば「PUBG」が出てきたあと、大手の会社は似たようなゲームをたくさん作りましたよね。
+			今やバトロワはマンネリだけどまだ遊んでいるゲーマーは多い。私もその一人です。<br /><br />
+			あるいは、大手が売っているタイトルを見ると大半は往年の名作の続編です。
+			<b>大手の会社は大規模な開発をするので安牌な企画しかできないのです。</b>
+			「こんなもの作ったら面白いからやりましょう」という人が大手の社内にいても「前例がない、実績がないものは稟議を通せない」というのが実態です。
+			</p>
+			<p>
+			対してインディーゲーム。
+			「これは」というタイトルがありつつも、成功しているインディーゲームのチームは世界全体で見れば希少なのではないでしょうか。
+			つい作り手の趣味に走ってしまったり、何を作ればウケるのか分からなかったり、開発のノウハウがないので完成しなかったり。<br /><br />
+			「これが俺の趣味で、これを作りたいんだ！」というはっきりした軸があるなら全然よいのですが、
+			<b>「なんとなくゲームの個人制作で食っていけたらいいなと思っているけど、実際には攻めあぐねている」というチームや人のほうがたくさんいる</b>ように見受けられます。
+			</p>
+			<p>
+			解決策として、我々は<b>「ゲーマーが本当に遊びたいと思うゲームを作って、ちゃんと完成させてちゃんと売る」をやります。
+			位置としては「安牌な企画しかできない大手」と「趣味に走ってしまうインディー」の間です。</b>
+			少人数で小回りのきく開発をしながらも、世の中をあっといわせるゲームを目指し、ちゃんと完成させ、ちゃんと売ることで次につなげます。
+			<b>これは本気でやりたいと思っていて、実現させるだけのノウハウを持っているかも、と思っています。</b></p>
+			</p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</section>
+		<section id="p5">
+			<h2>ご連絡先</h2>
+			<p><a href="https://x.com/eastginza" target="_blank">X.com/eastginza</a></p>
+		</section>
+			
+			<small>&copy; EAST GINZA COMPANY</small>
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			function headerPaddingAdjust() {
+				$("header").css("padding-top", floatingmenu.outerHeight());
+			}
+			const floatingmenu = $("nav");
+			headerPaddingAdjust();
+			
+			$(window).resize(function() {
+				headerPaddingAdjust();
+			});
+			
+			const hash = decodeURI(location.hash);
+			if(hash){
+				$("html, body").animate({scrollTop:$(hash).offset().top});
+				window.history.replaceState(null, '', window.location.pathname + window.location.search);
+			}
+			
+			$('a[href^="#"]').click(function(){
+				const href= $(this).attr("href");
+				const target = $(href == "#" || href == "" ? 'html' : href);
+				$("html, body").animate({scrollTop:(target.offset().top - floatingmenu.outerHeight())});
+				window.history.replaceState(null, '', window.location.pathname + window.location.search);
+				return false;
+			});
 		});
-	});
-</script>
+	</script>
 </body>
 </html>
