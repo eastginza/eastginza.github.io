@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
 	<title>イースト・ギンザ・カンパニー：東銀座のインディーゲーム製作チーム</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 	<style>
 		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 		button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
@@ -31,11 +34,13 @@
 			color: black;
 			text-decoration: none;
 		}
-		cite a {
+		.cite_a {
 			color: blue;
 		}
 		#header-logo {
 			font-weight:bold;
+			font-family: "Fjalla One", serif;
+			font-weight: 400;
 		}
 		header {
 			text-align:center;
@@ -44,10 +49,12 @@
 		section, header {
 			width:100%;
 			padding-top:4rem;
-			padding-bottom:4rem;
 			width:50rem;
 			display:block;
 			margin:auto;
+		}
+		section {
+			padding-bottom:4rem;
 		}
 		section .p1 {
 			padding-top:0;
@@ -111,25 +118,29 @@
 		}
 		nav {
 			position:fixed;
+			box-sizing: border-box;
+			width:50rem;
 			top:0;
-			left:0;
-			width:100%;
-			text-align:center;
-			padding-top:1rem;
-			padding-bottom:1rem;
+			left: 50%;
+			transform: translateX(-50%);
+			padding:1rem;
 			background:white;
-		}
-		nav a {
-			display: inline-block;
-			margin-right: 2rem;
-		}
-		nav a:last-child {
-			margin-right: 0;
+			text-align:center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: stretch;
+			column-gap: 1rem;
 		}
 		small {
 			display:block;
 			margin-top:8rem;
 			text-align:center;
+		}
+		#themes {
+			display: block;
+			text-align: center;
+			font-size: 0.8rem;
 		}
 		/* MOBILE */
 		@media screen and (max-width: 639px) {
@@ -140,6 +151,22 @@
 				width: 100%;
 				height: auto;
 				max-width: 100%;
+			}
+			nav {
+				width:100%;
+				top:0;
+				left:0;
+				transform: none;
+				font-size: 0.9rem;
+			}
+			nav a {
+				column-gap: 1rem;
+			}
+			nav a:first-child, nav a:last-child {
+				padding-right:0;
+			}
+			#header-logo {
+				width:100%;
 			}
 			section {
 				width:100%;
@@ -167,9 +194,10 @@
 </head>
 <body>
 	<header>
-		<h1><img src="EAST-GINZA-COMPANY.png" alt="EAST GINZA COMPANY (イースト・ギンザ・カンパニー)" /></h1>
+		<h1><img id="logoimage" src="EAST-GINZA-COMPANY.png" alt="EAST GINZA COMPANY (イースト・ギンザ・カンパニー)" /></h1>
 	</header>
-	<nav id="#floatingmenu"><a href="#top" id="header-logo">EAST GINZA COMPANY</a><a href="#p1">これは何？</a><a href="#p2">方針</a><a href="#p3">人材募集</a><a href="#p4">創業趣意書</a><a href="#p5">ご連絡先</a></nav>
+	<aside id="themes">UI THEME <span id="themelight" style="text-decoration:underline;">LIGHT</span> | <span id="themeblack">DARK</span></aside>
+	<nav id="#floatingmenu"><a href="#top" id="header-logo" id="nav0">EAST GINZA COMPANY</a><a href="#p1" id="nav1">これは何？</a><a href="#p2" id="nav2">方針</a><a href="#p3" id="nav3">人材募集</a><a href="#p4" id="nav4">創業趣意書</a><a href="#p5" id="nav5">ご連絡先</a></nav>
 	<main>
 		<section id="p1">
 			<h2>これは何？</h2>
@@ -462,7 +490,7 @@
 			&gt; プロジェクトマネージャーとかディレクターとかしてると、<br />
 			&gt; 「事故を未然に防いでおく」ということが、<br />
 			&gt; その仕事のほとんどのような気がするのね。
-			</blockquote><cite><a href="https://www.1101.com/nintendo/nin8/nin8_1.htm" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　〜今思うこと、５年後のこと〜　第１回　宮本茂が語る、１９９９年９月。</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/nin8/nin8_1.htm" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　〜今思うこと、５年後のこと〜　第１回　宮本茂が語る、１９９９年９月。</a></cite>
 			<p>ここでいう「事故」がなんなのかは明かされていませんが、任天堂はゲームメーカーですから大きくいって2つです。</p>
 			<ul>
 				<li>ゲームが完成しないこと</li>
@@ -481,7 +509,7 @@
 				&gt; 疲れただけですよね。<br />
 				&gt; そんなことのために働いたんじゃないって、<br />
 				&gt; いっしょにやってた人も思うでしょ。
-			</blockquote><cite><a href="https://www.1101.com/n/s/miyamoto_shigeru2024/2024-01-11.html" target="_blank">引用元：ほぼ日刊イトイ新聞　なにもできないからプロデューサーになった　そんなわけないでしょう、宮本茂さん　第11回 3000万本</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/n/s/miyamoto_shigeru2024/2024-01-11.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　なにもできないからプロデューサーになった　そんなわけないでしょう、宮本茂さん　第11回 3000万本</a></cite>
 			<p>これを未然に防ぐというのは、つまり「完成させること」と「完成したものをちゃんと売ること」すなわち「ガツンと売って、スタッフにドンとギャラを渡して、次も元気に作れること」を意味します。</p>
 			<p>失敗しないゲーム開発方法といってもいい。</p>
 			<p>そんなの当たり前じゃないかと思われるかもしれませんが、現実にはゲームビジネスではたくさんの事故が起きています。</p>
@@ -551,7 +579,7 @@
 			<blockquote cite="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html">
 				&gt; だから、キノコはどうやっても<br />
 				&gt; とれるようにできているんですね。
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html" target="_blank">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　4. いいキノコだとわかってもらうために</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　4. いいキノコだとわかってもらうために</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index3.html">
 				&gt; 横井（軍平）さん（※9）が<br />
 				&gt; 「下から叩いたら動けなくなるものはなに？」と言うので、<br />
@@ -559,20 +587,20 @@
 				&gt; そしたら、「やっぱりカメは踏めた方が自然だよね<br />
 				&gt; とか「踏めば中身が出てきた方がいいかな？」って<br />
 				&gt; どんどん連鎖的にアイデアが出てきたんです。<br />
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index3.html" target="_blank">引用元：任天堂　社長が訊く『スーパーマリオギャラクシー』　Vol.4 宮本茂 篇　3. 『マリオらしさ』がはじめてことばに</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index3.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『スーパーマリオギャラクシー』　Vol.4 宮本茂 篇　3. 『マリオらしさ』がはじめてことばに</a></cite>
 			<blockquote cite="https://www.youtube.com/watch?v=TyycqbwBEYk">
 				&gt; 多分我々が直感的に思う「生きているもの」の定義の一つは動いていることですよね<br />
 				&gt; 突然パタッと倒れて動かなくなったら、あぁ死んだ！とかって思いますよね
-			</blockquote><cite><a href="https://www.youtube.com/watch?v=TyycqbwBEYk" target="_blank">引用元：謎だらけのタンパク質の世界。身体の中の仕組みは最適なのか？【岡田康志×堀江貴文】</a></cite>
+			</blockquote><cite><a href="https://www.youtube.com/watch?v=TyycqbwBEYk" target="_blank" class="cite_a">引用元：謎だらけのタンパク質の世界。身体の中の仕組みは最適なのか？【岡田康志×堀江貴文】</a></cite>
 
 			<blockquote cite="http://rickyreports.jp/archives/miyamotoshigeru/">
 				&gt; 必ずトゲがついているとか、燃えているとか、触っただけで駄目そうなものが出てきます。これは別にトゲのついたキャラクターを作りたいのではなくて、遊ぶ人がよく分かるような作風にしているんです。
-			</blockquote><cite><a href="http://rickyreports.jp/archives/miyamotoshigeru/" target="_blank">引用元：マリオを生んだゲーム界の先駆者、宮本茂 | リッキーレポート</a></cite>
+			</blockquote><cite><a href="http://rickyreports.jp/archives/miyamotoshigeru/" target="_blank" class="cite_a">引用元：マリオを生んだゲーム界の先駆者、宮本茂 | リッキーレポート</a></cite>
 			<blockquote cite="https://www.4gamer.net/games/087/G008783/20091026043/">
 				&gt; 「誰が見ても何をすればいいのか分かる」こと<br />
 				　（中略）<br />
 				&gt; 「どこにゴールがあるか分からない」というスタイルに批判が集中した。そこで宮本氏が考えたのは，スタート時の主人公から剣を外してしまうことだった。その代わり，誰がどう見ても入りたくなる洞窟の入り口を，主人公の近くに設置する。洞窟に入ると，おじいさんがいて「この先は危険じゃ」と剣をくれる。次は盾，その次は……といったように，徐々に「こういうゲームなんだ」と分かる
-			</blockquote><cite><a href="https://www.4gamer.net/games/087/G008783/20091026043/" target="_blank">引用元：「人生に無駄なし」「チャレンジしていれば悩まない」──任天堂 宮本 茂氏，30年にわたる自らの仕事史を振り返る</a></cite>
+			</blockquote><cite><a href="https://www.4gamer.net/games/087/G008783/20091026043/" target="_blank" class="cite_a">引用元：「人生に無駄なし」「チャレンジしていれば悩まない」──任天堂 宮本 茂氏，30年にわたる自らの仕事史を振り返る</a></cite>
 			<blockquote cite="https://www.1101.com/nintendo/pikmin3/2013-07-17.html">
 				&gt; 室町時代の人でも<br />
 				&gt; おもしろいと思うようなことをやりたいんですよ。<br />
@@ -586,7 +614,7 @@
 				&gt; スポーツなんか、いい例ですよね。<br />
 				&gt; ゴルフはよくできていて、<br />
 				&gt; カップにボールを入れたら「あがり！」ですよね。
-			</blockquote><cite><a href="https://www.1101.com/nintendo/pikmin3/2013-07-17.html" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　宮本茂はどういうふうに構造をつくっていくのか。　第3回 室町時代の人でもわかるおもしろさ。</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/pikmin3/2013-07-17.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　宮本茂はどういうふうに構造をつくっていくのか。　第3回 室町時代の人でもわかるおもしろさ。</a></cite>
 			<blockquote cite="https://www.1101.com/nintendo/zelda/index.html">
 				&gt; 東京ローカルって僕は言ってて。<br />
 				&gt; 東京で流行ってるものを作ったら<br />
@@ -598,23 +626,23 @@
 				&gt; ミニモニ。が出てきてとか、<br />
 				&gt; それってやればやるほど<br />
 				&gt; 世界に持っていけなくなりますよね。
-			</blockquote><cite><a href="https://www.1101.com/nintendo/zelda/index.html" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　いよいよ『ゼルダ』がやってきた！　ゼルダの伝説 風のタクト special その3 宮本茂・糸井重里対談 その5（最終回）クリエイティブなことに心を使おうよ</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/zelda/index.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　いよいよ『ゼルダ』がやってきた！　ゼルダの伝説 風のタクト special その3 宮本茂・糸井重里対談 その5（最終回）クリエイティブなことに心を使おうよ</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index.html">
 				&gt; 僕はもともとＩＤ（インダストリアルデザイナー）なので<br />
 				&gt; 「なぜ面白いのか？」という構造の部分をいろいろ考えていました。<br />
 				&gt; 「なぜお客さんはもう１回やろうとするのか？」と・・・。
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index.html" target="_blank">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　1. 最初は跳ばなかったマリオ</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　1. 最初は跳ばなかったマリオ</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html">
 				&gt; ジャンプというのはユニークなもので、<br />
 				&gt; 特許があるんだ、というくらい。<br />
 				&gt; 「これは、他のゲームには負けられへん」と（笑）。<br />
 				&gt; もともと、大きなキャラクターが<br />
-				&gt; 青空の背景で跳びはねるような実験をやっていまして。
+				&gt; 青空の背景で跳びはねるような実験をやっていまして。<br />
 				　（中略）<br />
 				&gt; そこで、ファミコンの能力を最大限活かして<br />
 				&gt; 大きなキャラクターが陸海空を駆け抜けるというテーマで<br />
 				&gt; 『スーパーマリオブラザーズ』をつくることになったんです。
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html" target="_blank">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　4. いいキノコだとわかってもらうために</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/smnj/vol1/index4.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『New スーパーマリオブラザーズ Wii』　その1　4. いいキノコだとわかってもらうために</a></cite>
 			<blockquote cite="https://www.1101.com/nintendo/zelda/08.html">
 				&gt; どういうものかっていうひな型があるので、<br />
 				&gt; そこは迷わないってことがあります。<br />
@@ -627,30 +655,30 @@
 				&gt; その目的が間違ってるんじゃないか、<br />
 				&gt; みたいなことを、<br />
 				&gt; 途中から言いだしたりとかするわけでしょ？
-			</blockquote><cite><a href="https://www.1101.com/nintendo/zelda/08.html" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　いよいよ『ゼルダ』がやってきた！　ゼルダの伝説 風のタクト special その3 宮本茂・糸井重里対談 その1 ゼルダ・チームは九重部屋なのかもしれない。</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/zelda/08.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　いよいよ『ゼルダ』がやってきた！　ゼルダの伝説 風のタクト special その3 宮本茂・糸井重里対談 その1 ゼルダ・チームは九重部屋なのかもしれない。</a></cite>
 			<blockquote cite="https://www.1101.com/n/s/miyamoto_shigeru2024/2024-01-03.html">
 				&gt; 最終的には100人とか200人規模の<br />
 				&gt; チームでつくるプロジェクトでも、<br />
 				&gt; 最初は絞って５人とかではじめるんですよ。
-			</blockquote><cite><a href="https://www.1101.com/n/s/miyamoto_shigeru2024/2024-01-03.html" target="_blank">引用元：ほぼ日刊イトイ新聞　なにもできないからプロデューサーになった　そんなわけないでしょう、宮本茂さん　第３回 最少人数のチームで</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/n/s/miyamoto_shigeru2024/2024-01-03.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　なにもできないからプロデューサーになった　そんなわけないでしょう、宮本茂さん　第３回 最少人数のチームで</a></cite>
 			<blockquote cite="https://www.1101.com/nintendo/pikmin3/2013-07-23.html">
 				&gt; 「おもしろいかどうかわからない」ことを<br />
 				&gt; つくって確認する。<br />
 				&gt; ぼくは「実験」って呼んでて、<br />
 				&gt; それを試すことを推奨してます。
-			</blockquote><cite><a href="https://www.1101.com/nintendo/pikmin3/2013-07-23.html" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　宮本茂はどういうふうに構造をつくっていくのか。　第7回 足りなかったらそのときにつくろう。</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/pikmin3/2013-07-23.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　宮本茂はどういうふうに構造をつくっていくのか。　第7回 足りなかったらそのときにつくろう。</a></cite>
 			<blockquote cite="https://www.nintendo.com/jp/interview/ampya/index.html">
 				&gt; もうできあがってるかのようにE3で話した（笑）。<br />
 				　（中略）<br />
 				&gt; でもあの時点ではステージが一面しかなかったですよね。
-			</blockquote><cite><a href="https://www.nintendo.com/jp/interview/ampya/index.html" target="_blank">引用元：開発者に訊きました : ピクミン４｜任天堂</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.com/jp/interview/ampya/index.html" target="_blank" class="cite_a">引用元：開発者に訊きました : ピクミン４｜任天堂</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/wiiu/interview/agmj/vol1/index.html">
 				&gt; 新しいゲームのアイデアを出しあっていました。<br />
 				　（中略）<br />
 				&gt; 豆腐のような形をした<br />
 				&gt; 白いのと黒いのがインクを発射しあって、<br />
 				&gt; 陣地を取りあう、という遊びでした。
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wiiu/interview/agmj/vol1/index.html" target="_blank">引用元：任天堂　社長が訊く『Splatoon（スプラトゥーン）』　1. はじめは豆腐</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wiiu/interview/agmj/vol1/index.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『Splatoon（スプラトゥーン）』　1. はじめは豆腐</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index2.html">
 				&gt; 『マリオ64』のよさって、はじめて3Dになったマリオを、<br />
 				&gt; 自由に動かすことができたことだと思います。<br />
@@ -660,15 +688,15 @@
 				&gt; 「それだけでゲームになるんですか？」って、心配されたんです。<br />
 				&gt; でも、ゲームになってるけど、おもしろくないものをつくるよりは、<br />
 				&gt; ゲームになってないけど、みんながおもしろがるものをつくる方がいいやん
-			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index2.html" target="_blank">引用元：任天堂　社長が訊く『スーパーマリオギャラクシー』　Vol.4 宮本茂 篇　2. そこで遊ぶだけでも楽しい</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/wii/interview/rmgj/vol4/index2.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『スーパーマリオギャラクシー』　Vol.4 宮本茂 篇　2. そこで遊ぶだけでも楽しい</a></cite>
 			<blockquote cite="https://www.itmedia.co.jp/makoto/articles/1002/10/news012_5.html">
 				&gt; 僕はチームの中で「世の中には“よくできたゲーム”と“面白いゲーム”がある」と言っています。
-			</blockquote><cite><a href="https://www.itmedia.co.jp/makoto/articles/1002/10/news012_5.html" target="_blank">引用元：ITmedia ビジネスオンライン　“よくできたゲーム”と“面白いゲーム”の違いとは？――マリオの父、宮本茂氏の設計哲学（前編）（5/5 ページ）</a></cite>
+			</blockquote><cite><a href="https://www.itmedia.co.jp/makoto/articles/1002/10/news012_5.html" target="_blank" class="cite_a">引用元：ITmedia ビジネスオンライン　“よくできたゲーム”と“面白いゲーム”の違いとは？――マリオの父、宮本茂氏の設計哲学（前編）（5/5 ページ）</a></cite>
 			<blockquote cite="https://www.nintendo.co.jp/3ds/interview/aqej/vol5/index.html">
 				&gt; 唯一それがわかる人は、スケジュールを計算する人で、<br />
 				&gt; でも、その人は、“面白さ”に対しては<br />
 				&gt; 何の保証もしてくれないんです。
-			</blockquote><cite><a href="https://www.nintendo.co.jp/3ds/interview/aqej/vol5/index.html" target="_blank">引用元：任天堂　社長が訊く『ゼルダの伝説 時のオカリナ 3D』宮本 茂 篇　1. 冒険の舞台はガノン城？</a></cite>
+			</blockquote><cite><a href="https://www.nintendo.co.jp/3ds/interview/aqej/vol5/index.html" target="_blank" class="cite_a">引用元：任天堂　社長が訊く『ゼルダの伝説 時のオカリナ 3D』宮本 茂 篇　1. 冒険の舞台はガノン城？</a></cite>
 			<blockquote cite="https://www.1101.com/iwata/">
 				&gt; たとえば、ある料理店で、お客さんが<br />
 				&gt; 出てきた料理について「多い」と言ってる。<br />
@@ -677,12 +705,12 @@
 				&gt; その根っこにあるものは、<br />
 				&gt; じつは「多い」ことが問題じゃなくて、<br />
 				&gt; 「まずい」ことが問題だったりするんです。
-			</blockquote><cite><a href="https://www.1101.com/iwata/" target="_blank">引用元：ほぼ日刊イトイ新聞　任天堂の岩田社長が遊びに来たので、 みんなでご飯を食べながら話を聞いたのだ。 Mr.Iwata, president of Nintendo came to our office.  We had a nice talk over supper.</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/iwata/" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　任天堂の岩田社長が遊びに来たので、 みんなでご飯を食べながら話を聞いたのだ。 Mr.Iwata, president of Nintendo came to our office.  We had a nice talk over supper.</a></cite>
 			<blockquote cite="https://www.4gamer.net/games/000/G000000/20111205001/index_2.html">
 				&gt; そういう分野は，得てして数年で凄まじいレッドオーシャンになりますから。そこで勝ち残るのは大変です。僕はそういう市場で勝負したくない（笑）。だから僕は，まずこのCの部分が高い案件（ニーズ/サービス）を探すんです。そして理想でいえば，自分達だけがその高い山を越えられるってものがいいわけですよね。<br />
 				　（中略）<br />
 				&gt; 実は僕がキャズム理論で気に食わなかったのが，この触媒に当たる視点が欠けていたところなんですよ。溝があるのは分かったけれど，じゃあどうするんだよ，みたいな（苦笑）
-			</blockquote><cite><a href="https://www.4gamer.net/games/000/G000000/20111205001/index_2.html" target="_blank">引用元：「儲けちゃ駄目」は道徳じゃなくて科学の話。論理的に駄目なんです――川上量生氏との特別対談企画「ゲーマーはもっと経営者を目指すべき！」第2回</a></cite>
+			</blockquote><cite><a href="https://www.4gamer.net/games/000/G000000/20111205001/index_2.html" target="_blank" class="cite_a">引用元：「儲けちゃ駄目」は道徳じゃなくて科学の話。論理的に駄目なんです――川上量生氏との特別対談企画「ゲーマーはもっと経営者を目指すべき！」第2回</a></cite>
 			<blockquote cite="https://www.fastgrow.jp/articles/fgc-dwango-kawakami">
 				&gt; 「競争するな」と言うと、「ブルーオーシャンを選べということですね」と反応されることが多いのですが、これは間違いです。ブルーオーシャンには絶対に行ってはいけない。ブルーオーシャンは「青くて美しい海」というイメージがありますが、「青くて美しい海」ということはプランクトン、つまりは事業を成長させるためのエサがないことを意味しています。<br />
 				&gt; <br />
@@ -693,20 +721,20 @@
 				&gt; 重要なのは「何かを犠牲にすること」なんです。奇襲を成功させるためには、何かを捨てなければならない。ドワンゴの着メロサイトの場合は、バリエーション<br />
 				　（中略）<br />
 				&gt; 『ニコニコ動画』が捨てたのは、「当たり前の機能」と「サービスの寿命」
-			</blockquote><cite><a href="https://www.fastgrow.jp/articles/fgc-dwango-kawakami" target="_blank">引用元：ブルーオーシャンには手を出すな、「苦手なこと」こそ人に任せるな……ドワンゴ創業者・川上量生が語る、常識外れの事業創造論【連載 FastGrow Conference 2021】| FastGrow</a></cite>
+			</blockquote><cite><a href="https://www.fastgrow.jp/articles/fgc-dwango-kawakami" target="_blank" class="cite_a">引用元：ブルーオーシャンには手を出すな、「苦手なこと」こそ人に任せるな……ドワンゴ創業者・川上量生が語る、常識外れの事業創造論【連載 FastGrow Conference 2021】| FastGrow</a></cite>
 			<blockquote cite="https://www.4gamer.net/games/999/G999905/20141226033/index_4.html">
 				&gt; 川上さんは「スマートデバイスのプラットフォームの会社にはコンテンツの価値を高くする動機がない」ということをおっしゃっていたじゃないですか。「彼らにとって，コンテンツはあくまで客寄せなんだ」と。
-			</blockquote><cite><a href="https://www.4gamer.net/games/999/G999905/20141226033/index_4.html" target="_blank">引用元：任天堂・岩田氏をゲストに送る「ゲーマーはもっと経営者を目指すべき！」最終回――経営とは「コトとヒト」の両方について考える「最適化ゲーム」</a></cite>
+			</blockquote><cite><a href="https://www.4gamer.net/games/999/G999905/20141226033/index_4.html" target="_blank" class="cite_a">引用元：任天堂・岩田氏をゲストに送る「ゲーマーはもっと経営者を目指すべき！」最終回――経営とは「コトとヒト」の両方について考える「最適化ゲーム」</a></cite>
 			<blockquote cite="https://www.1101.com/nintendo/nin13/nin13_13.htm">
 				&gt; またねえ、10人くらいで作れるんですよ。<br />
 				&gt; 全然、『ゼルダの伝説』とか言わなければ。<br />
 				　（中略）<br />
 				&gt; 何人くらい必要かと言えば、<br />
 				&gt; 「おっと驚く」くらいなら３人くらいでいいわけで。
-			</blockquote><cite><a href="https://www.1101.com/nintendo/nin13/nin13_13.htm" target="_blank">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　『ＭＯＴＨＥＲ ３』の開発が中止になったことについての糸井重里・岩田聡・宮本茂の座談会　その12</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/nintendo/nin13/nin13_13.htm" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　樹の上の秘密基地　『ＭＯＴＨＥＲ ３』の開発が中止になったことについての糸井重里・岩田聡・宮本茂の座談会　その12</a></cite>
 			<blockquote cite="https://www.nikkei.com/article/DGXBZO40332590R10C12A4000000/">
 				&gt; インスタグラムは2010年10月にアプリの提供を始めたばかりで社員はわずか13人
-			</blockquote><cite><a href="https://www.nikkei.com/article/DGXBZO40332590R10C12A4000000/" target="_blank">引用元：日本経済新聞　2012年4月12日 7:00　「社員13人、売上高ゼロ」でも買収額810億円、フェイスブックM&Aの真相</a></cite>
+			</blockquote><cite><a href="https://www.nikkei.com/article/DGXBZO40332590R10C12A4000000/" target="_blank" class="cite_a">引用元：日本経済新聞　2012年4月12日 7:00　「社員13人、売上高ゼロ」でも買収額810億円、フェイスブックM&Aの真相</a></cite>
 			<blockquote cite="https://www.1101.com/readers/2013-10-13.html">
 				&gt; ・後から参入する者に、場所なんか空いてないのだ。<br />
 				&gt; 　空いているとしても、最悪の場所だけだ。<br />
@@ -721,7 +749,7 @@
 				&gt; 　平身低頭してお願いしているうちに、<br />
 				&gt; 　時間はどんどん過ぎていくし、<br />
 				&gt; 　いい機会も得られないままになる。
-			</blockquote><cite><a href="https://www.1101.com/readers/2013-10-13.html" target="_blank">引用元：ほぼ日刊イトイ新聞　2013年10月10日「今日のダーリン」より</a></cite>
+			</blockquote><cite><a href="https://www.1101.com/readers/2013-10-13.html" target="_blank" class="cite_a">引用元：ほぼ日刊イトイ新聞　2013年10月10日「今日のダーリン」より</a></cite>
 		</section>
 		<section id="p5">
 			<h2>ご連絡先</h2>
@@ -755,6 +783,20 @@
 				const target = $(href == "#" || href == "" ? 'html' : href);
 				$("html, body").animate({scrollTop:(target.offset().top - floatingmenu.outerHeight())});
 				window.history.replaceState(null, '', window.location.pathname + window.location.search);
+				return false;
+			});
+			$('#themelight').click(function(){
+				$("body, nav, a").css({'background-color':'white','color':'black'});
+				$("#logoimage").attr('src','EAST-GINZA-COMPANY.png');
+				$("#themeblack").css('text-decoration','none');
+				$("#themelight").css('text-decoration','underline');
+				return false;
+			});
+			$('#themeblack').click(function(){
+				$("body, nav, a").css({'background-color':'black','color':'white'});
+				$("#logoimage").attr('src','EAST-GINZA-COMPANY_white.png');
+				$("#themeblack").css('text-decoration','underline');
+				$("#themelight").css('text-decoration','none');
 				return false;
 			});
 		});
